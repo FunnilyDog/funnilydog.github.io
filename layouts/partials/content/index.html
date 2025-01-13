@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .animation {
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end);
+        }
+
+        .animation::after {
+            content: "";
+            border-right: 2px solid white;
+            position: absolute;
+            right: 0px;
+            top: 3px;
+            height: 18px;
+            animation: blink-caret 1s steps(1, end) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        你好！我是dx<br>
+        欢迎你来到我的的博客<br>
+        我喜欢编程，这是我的兴趣爱好之一<br>
+        这里有关于我对编程技术的一些分享，也是我的博客存在的意义<br>
+        希望你能在这里找到想要的东西，并期待与你讨论交流，祝你天天开心！
+    </p>
+    <h4 class="animation">
+        echo "Welcome to my website! I'm really happy you stopped by."
+    </h4>
+</body>
+
+</html>

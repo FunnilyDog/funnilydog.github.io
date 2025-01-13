@@ -34,26 +34,26 @@
   pageRef = "posts"
   weight = 20
 
-[[subnavigation]]
-  name = "An interesting topic"
-  pageRef = "tags/interesting-topic"
-  weight = 10
+#[[subnavigation]]
+#  name = "An interesting topic"
+#  pageRef = "tags/interesting-topic"
+#  weight = 10
 
-[[subnavigation]]
-  name = "My Awesome Category"
-  pre = "github"
-  pageRef = "categories/awesome"
-  weight = 20
+#[[subnavigation]]
+#  name = "FunnilyDog"
+#  pre = "github"
+#  pageRef = "https://github.com/FunnilyDog?tab=repositories"
+#  weight = 20
 
-[[main]]
-  name = "Categories"
-  pageRef = "categories"
-  weight = 20
+#[[main]]
+#  name = "Categories"
+#  pageRef = "categories"
+#  weight = 20
 
-[[main]]
-  name = "Tags"
-  pageRef = "tags"
-  weight = 30
+#[[main]]
+#  name = "Tags"
+#  pageRef = "tags"
+#  weight = 30
 
 
 # -- Footer Menu --

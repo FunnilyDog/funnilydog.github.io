@@ -2,6 +2,7 @@
 title: "React18 阅读笔记"
 date: 2025-01-13T13:55:00+08:00
 draft: false
+textColor: white
 # bookComments: false
 # bookSearchExclude: false
 ---
