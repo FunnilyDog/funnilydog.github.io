@@ -1,4 +1,4 @@
 baseURL = 'https://funnilydog.github.io'
 languageCode = 'zh-CN'
 title = 'My New Hugo Site'
-theme = "book"
+theme = "blowfish"

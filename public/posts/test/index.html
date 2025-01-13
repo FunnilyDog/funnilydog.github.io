@@ -1,198 +1,1460 @@
 <!DOCTYPE html>
-<html lang="zh-CN" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://funnilydog.github.io/posts/test/">
+<html lang="zh-cn" dir="ltr" class="scroll-smooth" data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-cn" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>React18 阅读笔记 &middot; My New Hugo Site</title>
+  <meta name="title" content="React18 阅读笔记 &middot; My New Hugo Site" />
+  
+  
+  
+  
+  
+  <link rel="canonical" href="https://funnilydog.github.io/posts/test/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.1c9cd0d1ebaf117272b5c4f6bd49878475cb210d5e0da4f061632d779f5bb46851881c187e6e634dba5071c4e3d80e7d5cec1dd80443b2fa68acd358f9eda881.css"
+    integrity="sha512-HJzQ0euvEXJytcT2vUmHhHXLIQ1eDaTwYWMtd59btGhRiBwYfm5jTbpQccTj2A59XOwd2ARDsvporNNY&#43;e2ogQ==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.c178288131a2f1ad46910438db47ac5f7e1c48cf949e49f6dc3310c8ec9660e23fe505805eba4e2e73711335808500360d773a2b64322feb35df52856edca286.js"
+    integrity="sha512-wXgogTGi8a1GkQQ420esX34cSM&#43;Unkn23DMQyOyWYOI/5QWAXrpOLnNxEzWAhQA2DXc6K2QyL&#43;s131KFbtyihg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://funnilydog.github.io/posts/test/">
   <meta property="og:site_name" content="My New Hugo Site">
-  <meta property="og:title" content="Test">
-  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="React18 阅读笔记">
+  <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-01-13T13:55:00+08:00">
     <meta property="article:modified_time" content="2025-01-13T13:55:00+08:00">
-<title>Test | My New Hugo Site</title>
-<link rel="icon" href="/favicon.png" >
-<link rel="manifest" href="/manifest.json">
-<link rel="canonical" href="https://funnilydog.github.io/posts/test/">
-<link rel="stylesheet" href="/book.min.6c8b9d2a1fc95075ed7da46ca81060b39add8fff6741ac51259f768929281e2c.css" integrity="sha256-bIudKh/JUHXtfaRsqBBgs5rdj/9nQaxRJZ92iSkoHiw=" crossorigin="anonymous">
-  <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.2b6333591953211fc501497937cbcdc6fcf29ad8ccca8f8e9dfa3e18bbb5848a.js" integrity="sha256-K2MzWRlTIR/FAUl5N8vNxvzymtjMyo&#43;Onfo&#43;GLu1hIo=" crossorigin="anonymous"></script>
-<!--
-Made with Book Theme
-https://github.com/alex-shpak/hugo-book
--->
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="React18 阅读笔记">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "React18 阅读笔记",
+    "headline": "React18 阅读笔记",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "https:\/\/funnilydog.github.io\/posts\/test\/",
+    "author" : {
+      "@type": "Person",
+      "name": ""
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-01-13T13:55:00\u002b08:00",
+    "datePublished": "2025-01-13T13:55:00\u002b08:00",
+    
+    "dateModified": "2025-01-13T13:55:00\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1357"
+  }]
+  </script>
+
+
+  
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
   
 </head>
-<body dir="ltr">
-  <input type="checkbox" class="hidden toggle" id="menu-control" />
-  <input type="checkbox" class="hidden toggle" id="toc-control" />
-  <main class="container flex">
-    <aside class="book-menu">
-      <div class="book-menu-content">
-        
-  <nav>
-<h2 class="book-brand">
-  <a class="flex align-center" href="/"><span>My New Hugo Site</span>
-  </a>
-</h2>
-
-
-<div class="book-search hidden">
-  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
-  <div class="book-search-spinner hidden"></div>
-  <ul id="book-search-results"></ul>
-</div>
-<script>document.querySelector(".book-search").classList.remove("hidden")</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</nav>
-
-
-
-
-  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
-
-
- 
-      </div>
-    </aside>
-
-    <div class="book-page">
-      <header class="book-header">
-        
-  <div class="flex align-center justify-between">
-  <label for="menu-control">
-    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
-  </label>
-
-  <h3>Test</h3>
-
-  <label for="toc-control">
-    
-    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
-    
-  </label>
-</div>
-
-
-  
-  <aside class="hidden clearfix">
-    
-  
-<nav id="TableOfContents"></nav>
-
-
-
-  </aside>
-  
- 
-      </header>
-
-      
-      
-<article class="markdown book-post">
-  <h2>
-    Test
-  </h2>
-  
-  <div class="flex align-center text-small book-post-date">
-    <img src="/svg/calendar.svg" class="book-icon " alt="" />
-    <span>January 13, 2025</span>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
   </div>
-
-
-
   
-
   
+  <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">My New Hugo Site</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Posts">
+        Blog
+    </p>
+</a>
 
 
-  <div class="book-post-content"></div>
-</article>
- 
+
+            
+            
+  <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Categories">
+        Categories
+    </p>
+</a>
+
+
+
+            
+             
+  <div>
+  <div class="cursor-pointer flex items-center nested-menu">
+    
+    <a  class="text-base font-medium text-gray-500 hover:text-primary-600 dark:hover:text-primary-400" title="">
+      Parent
+    </a>
+    <span>
       
 
-      <footer class="book-footer">
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+    </span>
+  </div>
+  <div class="absolute menuhide">
+    <div class="pt-2 p-5 mt-2 rounded-xl backdrop-blur shadow-2xl">
+      <div class="flex flex-col space-y-3">
         
-  <div class="flex flex-wrap justify-between">
-
-
-
-
-
+        <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="Posts">
+            example sub-menu 1
+          </p>
+        </a>
+        
+        <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+          
+          <p class="text-sm font-sm" title="Posts">
+            example sub-menu 2
+          </p>
+        </a>
+        
+      </div>
+    </div>
+  </div>
 </div>
 
 
 
-  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Tags">
+        Tags
+    </p>
+</a>
 
 
- 
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
         
-      </footer>
+        <p class="text-bg font-bg" title="Posts">
+            Blog
+        </p>
+    </a>
+</li>
 
-      
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/categories/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Categories">
+            Categories
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                     
+  <li class="mt-1">
+    <a href="" class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Parent
+        </p>
+        <span>
+            
+
+  <span class="relative block icon">
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 20 20"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path
+    fill-rule="evenodd"
+    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+    clip-rule="evenodd"
+  />
+</svg>
+
+  </span>
+
+
+        </span>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="Posts">
+            example sub-menu 1
+        </p>
+    </a>
+</li>
+
+<li class="mt-1">
+    <a href="/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-sm font-small" title="Posts">
+            example sub-menu 2
+        </p>
+    </a>
+</li>
+
+<li class="mb-2"></li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Tags">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                <hr>
+                <ul
+                    class="flex mt-4 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+
+                    
+                    <li class="mb-1">
+                        <a href=""  class="flex items-center">
+                            
+                            <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+                                An interesting topic
+                            </p>
+                        </a>
+                    </li>
+                    
+                    <li class="mb-1">
+                        <a href=""  class="flex items-center">
+                            
+                            <span  class="mr-3" >
+                                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+                            </span>
+                            
+                            <p class="text-sm font-sm text-gray-500 hover:text-gray-900" title="">
+                                My Awesome Category
+                            </p>
+                        </a>
+                    </li>
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+<div class="main-menu flex pb-3 flex-col items-end justify-between md:justify-start space-x-3" >
+    <div class="hidden md:flex items-center space-x-5">
+        
+        <a href=""  class="flex items-center">
+            
+            <p class="text-xs font-light text-gray-500 hover:text-gray-900" title="">
+                An interesting topic
+            </p>
+        </a>
+        
+        <a href=""  class="flex items-center">
+            
+            <span  class="mr-1" >
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+            </span>
+            
+            <p class="text-xs font-light text-gray-500 hover:text-gray-900" title="">
+                My Awesome Category
+            </p>
+        </a>
+        
+    </div>
+</div>
+
+
+
+
   
- 
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
 
-      <label for="menu-control" class="hidden book-menu-overlay"></label>
+
+<article>
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      React18 阅读笔记
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-01-13T13:55:00&#43;08:00">January 13, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1357 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">7 分钟</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+
+
+
     </div>
 
     
-    <aside class="book-toc">
-      <div class="book-toc-content">
-        
-  
-<nav id="TableOfContents"></nav>
-
-
- 
-      </div>
-    </aside>
     
-  </main>
+    
+    
+    
 
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
   
+  <div class="place-self-center">
+    
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+    
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">ReactDOM.createRoot 
+    <div id="reactdomcreateroot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#reactdomcreateroot" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>创建了一个 reactfiberrootnode current 属性指向一个新 fiber,并绑定所有事件监听</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 创建 tag = 1 的 FiberRoot 对象
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 并在current 上挂载了一个 tag = 3, mode = 1 的空fiber
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 初始化该 fiber 的 UpdateQueue  initializeUpdateQueue(uninitializedFiber)
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">createContainer</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">container</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">ConcurrentRoot</span><span class="p">,</span> <span class="c1">//  常量 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isStrictMode</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">concurrentUpdatesByDefaultOverride</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">identifierPrefix</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">onRecoverableError</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">transitionCallbacks</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// container[__reactContainer$(一串随机数)] = root.current;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">markContainerAsRoot</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">current</span><span class="p">,</span> <span class="nx">container</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">rootContainerElement</span>: <span class="kt">Document</span> <span class="o">|</span> <span class="nx">Element</span> <span class="o">|</span> <span class="nx">DocumentFragment</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">container</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">===</span> <span class="nx">COMMENT_NODE</span>
+</span></span><span class="line"><span class="cl">      <span class="o">?</span> <span class="p">(</span><span class="nx">container.parentNode</span>: <span class="kt">any</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">:</span> <span class="nx">container</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="cm">/** 为 container 添加事件监听 */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">listenToAllSupportedEvents</span><span class="p">(</span><span class="nx">rootContainerElement</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * this._internalRoot = internalRoot;
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 挂载到 ReactDOMRoot._internalRoot 属性上
+</span></span></span><span class="line"><span class="cl"><span class="cm">  */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">ReactDOMRoot</span><span class="p">(</span><span class="nx">root</span><span class="p">);</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">react 
+    <div id="react" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#react" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-dom/src/client/ReactDomRoot.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">ReactDOMRoot</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">render</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">children</span>: <span class="kt">ReactNodeList</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ...省略部分代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">updateContainer</span><span class="p">(</span><span class="nx">children</span><span class="p">,</span> <span class="nx">root</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberReconciler.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">updateContainer</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">element</span>: <span class="kt">ReactNodeList</span><span class="p">,</span> <span class="c1">// Index
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">container</span>: <span class="kt">OpaqueRoot</span><span class="p">,</span> <span class="c1">// root
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">parentComponent</span>: <span class="kt">?React$Component</span><span class="p">&lt;</span><span class="nt">any</span><span class="err">,</span> <span class="na">any</span><span class="p">&gt;,</span> <span class="c1">// null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">callback</span>: <span class="kt">?Function</span> <span class="c1">// null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span><span class="o">:</span> <span class="nx">Lane</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 初始化一个 update 任务
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">update</span> <span class="o">=</span> <span class="nx">createUpdate</span><span class="p">(</span><span class="nx">eventTime</span><span class="p">,</span> <span class="nx">lane</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">update</span><span class="p">.</span><span class="nx">payload</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">element</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 将创建的 update任务 添加到 ReactFiberConcurrentUpdates 文件
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 全局变量 concurrentQueues 中
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 用传入的 lane 更新fiber链表中的所有 lane 并返回 root
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * */</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">fiber</span> <span class="o">=</span> <span class="nx">container</span><span class="p">.</span><span class="nx">current</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">queue</span>: <span class="kt">SharedQueue</span><span class="p">&lt;</span><span class="nt">State</span><span class="p">&gt;</span> <span class="o">=</span> <span class="nx">fiber</span><span class="p">.</span><span class="nx">updateQueue</span><span class="p">.</span><span class="nx">shared</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">interleaved</span> <span class="o">=</span> <span class="nx">queue</span><span class="p">.</span><span class="nx">interleaved</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">interleaved</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">update</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="nx">update</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">ReactFiberConcurrentUpdates</span><span class="p">.</span><span class="nx">concurrentQueues</span> <span class="o">=</span> <span class="p">[</span><span class="nx">queue</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">queue</span><span class="p">.</span><span class="nx">interleaved</span> <span class="o">=</span> <span class="nx">update</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 上面是 enqueueUpdate 方法的具体实现 执行栈太长就把重要步骤挪过来方便查看了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">root</span> <span class="o">=</span> <span class="nx">markUpdateLaneFromFiberToRoot</span><span class="p">(</span><span class="nx">fiber</span><span class="p">,</span> <span class="nx">lane</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">root</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">scheduleUpdateOnFiber</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">current</span><span class="p">,</span> <span class="nx">lane</span><span class="p">,</span> <span class="nx">eventTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">entangleTransitions</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">current</span><span class="p">,</span> <span class="nx">lane</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">scheduleUpdateOnFiber</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span>: <span class="kt">FiberRoot</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">fiber</span>: <span class="kt">Fiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">lane</span>: <span class="kt">Lane</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">eventTime</span>: <span class="kt">number</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 将 eventTime 按 lane 插入到 root.eventTimes 中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">markRootUpdated</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">lane</span><span class="p">,</span> <span class="nx">eventTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 做的事情蛮多
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">ensureRootIsScheduled</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">eventTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// ensureRootIsScheduled
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">ensureRootIsScheduled</span><span class="p">(</span><span class="nx">root</span>: <span class="kt">FiberRoot</span><span class="p">,</span> <span class="nx">currentTime</span>: <span class="kt">number</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//根据 root.eventTimes 计算出 root.expirationTimes
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">markRootUpdated</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">lane</span><span class="p">,</span> <span class="nx">eventTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">nextLanes</span> <span class="o">=</span> <span class="nx">getNextLanes</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">NoLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">newCallbackPriority</span> <span class="o">=</span> <span class="nx">getHighestPriorityLane</span><span class="p">(</span><span class="nx">nextLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">existingCallbackNode</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">existingCallbackNode</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Cancel the existing callback. We&#39;ll schedule a new one below.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">cancelCallback</span><span class="p">(</span><span class="nx">existingCallbackNode</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">newCallbackNode</span> <span class="o">=</span> <span class="nx">scheduleCallback</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">schedulerPriorityLevel</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">performConcurrentWorkOnRoot</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">root</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackPriority</span> <span class="o">=</span> <span class="nx">newCallbackPriority</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span> <span class="o">=</span> <span class="nx">newCallbackNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 这里调用的就是 Scheduler 中的 unstable_scheduleCallback 方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="nx">Scheduler_scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">unstable_scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">getCurrentTime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">startTime</span> <span class="o">=</span> <span class="nx">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// NormalPriority 是 5000
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">timeout</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">expirationTime</span> <span class="o">=</span> <span class="nx">startTime</span> <span class="o">+</span> <span class="nx">timeout</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">newTask</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">taskIdCounter</span><span class="o">++</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">callback</span><span class="p">,</span> <span class="c1">// performConcurrentWorkOnRoot 方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">priorityLevel</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">startTime</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">expirationTime</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">sortIndex</span><span class="o">:</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">newTask</span><span class="p">.</span><span class="nx">sortIndex</span> <span class="o">=</span> <span class="nx">expirationTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 将 newTask 放进 taskQueue 并按照 sortIndex 排序
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">push</span><span class="p">(</span><span class="nx">taskQueue</span><span class="p">,</span> <span class="nx">newTask</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 挂载时都为初始值 false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isHostCallbackScheduled</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">isPerformingWork</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isHostCallbackScheduled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">requestHostCallback</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">scheduledHostCallback</span> <span class="o">=</span> <span class="nx">callback</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 挂载时都为初始值 false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isMessageLoopRunning</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">isMessageLoopRunning</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 通过 postMessage 异步调用 performWorkUntilDeadline
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">schedulePerformWorkUntilDeadline</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">requestHostCallback</span><span class="p">(</span><span class="nx">flushWork</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">performWorkUntilDeadline</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">getCurrentTime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">hasMoreWork</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 这里的 scheduledHostCallback 就是 flushWork
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">hasMoreWork</span> <span class="o">=</span> <span class="nx">scheduledHostCallback</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="nx">currentTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 还有任务则再调一轮
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">hasMoreWork</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">schedulePerformWorkUntilDeadline</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">isMessageLoopRunning</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">scheduledHostCallback</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
+</span></span></span><span class="line"><span class="cl"><span class="c1">// hasTimeRemaining = true ,initialTime = currentTime
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">flushWork</span><span class="p">(</span><span class="nx">hasTimeRemaining</span><span class="p">,</span> <span class="nx">initialTime</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">isHostCallbackScheduled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">isPerformingWork</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 这里的 currentPriorityLevel 为初始值 3
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">previousPriorityLevel</span> <span class="o">=</span> <span class="nx">currentPriorityLevel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">workLoop</span><span class="p">(</span><span class="nx">hasTimeRemaining</span><span class="p">,</span> <span class="nx">initialTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">currentTask</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">currentPriorityLevel</span> <span class="o">=</span> <span class="nx">previousPriorityLevel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">isPerformingWork</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">enableProfiling</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">getCurrentTime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">markSchedulerSuspended</span><span class="p">(</span><span class="nx">currentTime</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">workLoop</span><span class="p">(</span><span class="nx">hasTimeRemaining</span><span class="p">,</span> <span class="nx">initialTime</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">initialTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">currentTask</span> <span class="o">=</span> <span class="nx">peek</span><span class="p">(</span><span class="nx">taskQueue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">currentTask</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 这里的 callback 就是 performConcurrentWorkOnRoot
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">callback</span> <span class="o">=</span> <span class="nx">currentTask</span><span class="p">.</span><span class="nx">callback</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">callback</span> <span class="o">===</span> <span class="s2">&#34;function&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">currentTask</span><span class="p">.</span><span class="nx">callback</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">currentPriorityLevel</span> <span class="o">=</span> <span class="nx">currentTask</span><span class="p">.</span><span class="nx">priorityLevel</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="kr">const</span> <span class="nx">didUserCallbackTimeout</span> <span class="o">=</span> <span class="nx">currentTask</span><span class="p">.</span><span class="nx">expirationTime</span> <span class="o">&lt;=</span> <span class="nx">currentTime</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 至此 任务调度 完成，开始执行任务 进入 reconciler 阶段
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="kr">const</span> <span class="nx">continuationCallback</span> <span class="o">=</span> <span class="nx">callback</span><span class="p">(</span><span class="nx">didUserCallbackTimeout</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">currentTime</span> <span class="o">=</span> <span class="nx">getCurrentTime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">continuationCallback</span> <span class="o">===</span> <span class="s2">&#34;function&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">currentTask</span><span class="p">.</span><span class="nx">callback</span> <span class="o">=</span> <span class="nx">continuationCallback</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">currentTask</span> <span class="o">===</span> <span class="nx">peek</span><span class="p">(</span><span class="nx">taskQueue</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">pop</span><span class="p">(</span><span class="nx">taskQueue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">performConcurrentWorkOnRoot</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">didTimeout</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">originalCallbackNode</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cm">/**  刷新pending状态的effects, 有可能某些effect会取消本次任务 */</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">didFlushPassiveEffects</span> <span class="o">=</span> <span class="nx">flushPassiveEffects</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">lanes</span> <span class="o">=</span> <span class="nx">getNextLanes</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">NoLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">exitStatus</span> <span class="o">=</span> <span class="nx">renderRootSync</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">].</span><span class="nx">includes</span><span class="p">(</span><span class="nx">exitStatus</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">root</span><span class="p">.</span><span class="nx">finishedWork</span> <span class="o">=</span> <span class="nx">finishedWork</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">root</span><span class="p">.</span><span class="nx">finishedLanes</span> <span class="o">=</span> <span class="nx">lanes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// !调和阶段完成 提交fiber树
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">finishConcurrentRender</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exitStatus</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">ensureRootIsScheduled</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">now</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 若还是同一个任务则继续返回该任务
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span> <span class="o">===</span> <span class="nx">originalCallbackNode</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">performConcurrentWorkOnRoot</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">root</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">renderRootSync</span><span class="p">(</span><span class="nx">root</span>: <span class="kt">FiberRoot</span><span class="p">,</span> <span class="nx">lanes</span>: <span class="kt">Lanes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 存储 executionContext
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">prevExecutionContext</span> <span class="o">=</span> <span class="nx">executionContext</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 将 executionContext 更新为 RenderContext
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">executionContext</span> <span class="o">|=</span> <span class="nx">RenderContext</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">ReactCurrentDispatcher</span><span class="p">.</span><span class="nx">current</span> <span class="o">=</span> <span class="nx">ContextOnlyDispatcher</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 如果workinprogress不存在 则初始化一个
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 并将 queue.interleaved 移到 queue.pending 中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 这里的 queue 存的是 root.current.updateQueue.shared
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 在 enqueueConcurrentClassUpdate 方法中给 queue.interleaved 赋值为 update;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 该update 是在 updateContainer 方法中 创建的 并将 payload属性赋值为了 render方法里的 第一个参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">prepareFreshStack</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">workLoopSync</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">thrownValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">handleError</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">thrownValue</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">workInProgressRootExitStatus</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">workLoopSync() {</span>
+</span></span><span class="line"><span class="cl">  <span class="k">while</span> <span class="p">(</span><span class="nx">workInProgress</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">performUnitOfWork</span><span class="p">(</span><span class="nx">workInProgress</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">performUnitOfWork</span><span class="p">(</span><span class="nx">unitOfWork</span>: <span class="kt">Fiber</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">unitOfWork</span><span class="p">.</span><span class="nx">alternate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">next</span><span class="p">;</span> <span class="c1">// 用来存放beginWork()返回的结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 根据 workInProgress.tag 创建对应 fiber
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 若 为 函数组件 则调用 renderWidthHook 执行函数组件 并 创建对应fiber
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">next</span> <span class="o">=</span> <span class="nx">beginWork</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">unitOfWork</span><span class="p">,</span> <span class="nx">subtreeRenderLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 更新状态了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">unitOfWork</span><span class="p">.</span><span class="nx">memoizedProps</span> <span class="o">=</span> <span class="nx">unitOfWork</span><span class="p">.</span><span class="nx">pendingProps</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">next</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// If this doesn&#39;t spawn new work, complete the current work.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">completeUnitOfWork</span><span class="p">(</span><span class="nx">unitOfWork</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 下次的workLoopSync/workLoopConcurrent的while循环的循环主体为子Fiber节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">workInProgress</span> <span class="o">=</span> <span class="nx">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">completeUnitOfWork</span><span class="p">(</span><span class="nx">unitOfWork</span>: <span class="kt">Fiber</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 本次 performUnitOfWork 的循环主体 workInprogress 的最底层 child
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">let</span> <span class="nx">completedWork</span> <span class="o">=</span> <span class="nx">unitOfWork</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">completedWork</span><span class="p">.</span><span class="nx">alternate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">returnFiber</span> <span class="o">=</span> <span class="nx">completedWork</span><span class="p">.</span><span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 只要 beginWork 阶段正常执行后（即执行无异常），都会进到这一段逻辑来
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">let</span> <span class="nx">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">next</span> <span class="o">=</span> <span class="nx">completeWork</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">completedWork</span><span class="p">,</span> <span class="nx">subtreeRenderLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">resetCurrentDebugFiberInDEV</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">next</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">workInProgress</span> <span class="o">=</span> <span class="nx">next</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 取当前Fiber节点(completedWork)的兄弟(sibling)节点；
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 如果有值，则结束completeUnitOfWork，并将该兄弟节点作为下次performUnitOfWork的主体(unitOfWork)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">siblingFiber</span> <span class="o">=</span> <span class="nx">completedWork</span><span class="p">.</span><span class="nx">sibling</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">siblingFiber</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// If there is more work to do in this returnFiber, do that next.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">workInProgress</span> <span class="o">=</span> <span class="nx">siblingFiber</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Otherwise, return to the parent
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 若没有兄弟节点，则将在下次do...while循环中处理父节点(completedWork.return)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">completedWork</span> <span class="o">=</span> <span class="nx">returnFiber</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// Update the next thing we&#39;re working on in case something throws.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 此处需要注意！
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 虽然把workInProgress置为completedWork，但由于没有return，即没有结束completeUnitOfWork，因此没有意义
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 直到completedWork（此时实际上是本循环中原completedWork.return）为null，结束do...while循环后
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 此时completeUnitOfWork的运行结果(workInProgress)为null
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 也意味着performSyncWorkOnRoot/performConcurrentWorkOnRoot中的while循环也达到了结束条件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">workInProgress</span> <span class="o">=</span> <span class="nx">completedWork</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">completedWork</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// We&#39;ve reached the root.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">workInProgressRootExitStatus</span> <span class="o">===</span> <span class="nx">RootInProgress</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">workInProgressRootExitStatus</span> <span class="o">=</span> <span class="nx">RootCompleted</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">finishConcurrentRender</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exitStatus</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="k">switch</span> <span class="p">(</span><span class="nx">exitStatus</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nx">RootCompleted</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// The work completed. Ready to commit.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">commitRoot</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">root</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">workInProgressRootRecoverableErrors</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">workInProgressTransitions</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">commitRootImpl</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span>: <span class="kt">FiberRoot</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">recoverableErrors</span>: <span class="kt">null</span> <span class="o">|</span> <span class="nb">Array</span><span class="p">&lt;</span><span class="nt">CapturedValue</span><span class="err">&lt;</span><span class="na">mixed</span><span class="p">&gt;</span><span class="o">&gt;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">transitions</span>: <span class="kt">Array</span><span class="p">&lt;</span><span class="nt">Transition</span><span class="p">&gt;</span> <span class="o">|</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">renderPriorityLevel</span>: <span class="kt">EventPriority</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">do</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">flushPassiveEffects</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">rootWithPendingPassiveEffects</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">finishedWork</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">finishedWork</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">lanes</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">finishedLanes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">finishedWork</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">finishedLanes</span> <span class="o">=</span> <span class="nx">NoLanes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackPriority</span> <span class="o">=</span> <span class="nx">NoLane</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">rootDoesHavePassiveEffects</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">rootDoesHavePassiveEffects</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pendingPassiveEffectsRemainingLanes</span> <span class="o">=</span> <span class="nx">remainingLanes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pendingPassiveTransitions</span> <span class="o">=</span> <span class="nx">transitions</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">scheduleCallback</span><span class="p">(</span><span class="nx">NormalSchedulerPriority</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">flushPassiveEffects</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">   <span class="k">if</span> <span class="p">(</span><span class="nx">subtreeHasEffects</span> <span class="o">||</span> <span class="nx">rootHasEffect</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">shouldFireAfterActiveInstanceBlur</span> <span class="o">=</span> <span class="nx">commitBeforeMutationEffects</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">root</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">finishedWork</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberBeginWork.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">beginWork</span> <span class="o">=</span> <span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">unitOfWork</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">didReceiveUpdate</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">lanes</span> <span class="o">=</span> <span class="nx">NoLanes</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">updateHostRoot</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">workInProgress</span><span class="p">,</span> <span class="nx">renderLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">updateHostRoot</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">workInProgress</span><span class="p">,</span> <span class="nx">renderLanes</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pushHostRootContext</span><span class="p">(</span><span class="nx">workInProgress</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1">// 将 current 的 UpdateQueue 拷贝给 workInProgress
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">cloneUpdateQueue</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">workInProgress</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 将当前将要进行的更新 shared.pending 的环形链表，拆开拼接到到 lastBaseUpdate 的后面；
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 执行 firstBaseUpdate 链表的操作时，若当前 update 对应的任务的优先级符合要求，则执行；
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 若优先级较低，则存储执行到当前节点的状态，做为下次渲染时的初始值，和接下来所有的 update 节点；
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 将执行所有操作后得到的 newState 重新给到 workInProgress.memoizedState；
+</span></span></span><span class="line"><span class="cl"><span class="cm">   * 然后存储刚才淘汰下来的低优先级任务的链表，以便下次更新；
+</span></span></span><span class="line"><span class="cl"><span class="cm">   */</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">processUpdateQueue</span><span class="p">(</span><span class="nx">workInProgress</span><span class="p">,</span> <span class="nx">nextProps</span><span class="p">,</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">renderLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">nextState</span>: <span class="kt">RootState</span> <span class="o">=</span> <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">memoizedState</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">root</span>: <span class="kt">FiberRoot</span> <span class="o">=</span> <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">stateNode</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">nextChildren</span> <span class="o">=</span> <span class="nx">nextState</span><span class="p">.</span><span class="nx">element</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nx">reconcileChildren</span><span class="p">(</span><span class="nx">current</span><span class="p">,</span> <span class="nx">workInProgress</span><span class="p">,</span> <span class="nx">nextChildren</span><span class="p">,</span> <span class="nx">renderLanes</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">child</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">reconcileChildren</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">current</span>: <span class="kt">Fiber</span> <span class="o">|</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">workInProgress</span>: <span class="kt">Fiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">nextChildren</span>: <span class="kt">any</span><span class="p">,</span> <span class="c1">// 初次挂载时为 render 方法 中的参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">renderLanes</span>: <span class="kt">Lanes</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">current</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// mountChildFibers 也就是初始化 ChildReconciler 后 执行 reconcileChildFibers
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">child</span> <span class="o">=</span> <span class="nx">mountChildFibers</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">workInProgress</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nextChildren</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">renderLanes</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 更新阶段
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">child</span> <span class="o">=</span> <span class="nx">reconcileChildFibers</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">workInProgress</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">current</span><span class="p">.</span><span class="nx">child</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">nextChildren</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">renderLanes</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactChildFiber.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1">//  根据 newChild.$$typeof 不同类型 创建 fiber
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">reconcileChildFibers</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">returnFiber</span>: <span class="kt">Fiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">currentFirstChild</span>: <span class="kt">Fiber</span> <span class="o">|</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">newChild</span>: <span class="kt">any</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">lanes</span>: <span class="kt">Lanes</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span> <span class="nx">Fiber</span> <span class="o">|</span> <span class="kc">null</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span> <span class="nx">newChild</span> <span class="o">===</span> <span class="s2">&#34;object&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">newChild</span> <span class="o">!==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">switch</span> <span class="p">(</span><span class="nx">newChild</span><span class="p">.</span><span class="nx">$$typeof</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="nx">REACT_ELEMENT_TYPE</span><span class="o">:</span> <span class="c1">// react.element
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">return</span> <span class="nx">placeSingleChild</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="c1">// 调用 createFiberFromElement 为child 创建 fiber
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>          <span class="nx">reconcileSingleElement</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">returnFiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">currentFirstChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">newChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">lanes</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 省略掉其他case
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">newChild</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">reconcileChildrenArray</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">returnFiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">currentFirstChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">newChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">lanes</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">getIteratorFn</span><span class="p">(</span><span class="nx">newChild</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">reconcileChildrenIterator</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">returnFiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">currentFirstChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">newChild</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">lanes</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">throwOnInvalidObjectType</span><span class="p">(</span><span class="nx">returnFiber</span><span class="p">,</span> <span class="nx">newChild</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberCompleteWork.old.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">completeWork</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">current</span>: <span class="kt">Fiber</span> <span class="o">|</span> <span class="kc">null</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">workInProgress</span>: <span class="kt">Fiber</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">renderLanes</span>: <span class="kt">Lanes</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span><span class="o">:</span> <span class="nx">Fiber</span> <span class="o">|</span> <span class="kc">null</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">switch</span> <span class="p">(</span><span class="nx">workInProgress</span><span class="p">.</span><span class="nx">tag</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">case</span> <span class="nx">HostText</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// ...省略部分代码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// 根据不同tag 为 stateNode 创建 对应dom 节点
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">workInProgress</span><span class="p">.</span><span class="nx">stateNode</span> <span class="o">=</span> <span class="nx">createTextInstance</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">newText</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">rootContainerInstance</span><span class="p">,</span> <span class="c1">// root
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">currentHostContext</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">workInProgress</span>
+</span></span><span class="line"><span class="cl">      <span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">// 将所有child 的 return赋值为 completedWork；
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="c1">// 计算 completedWork 的 subtreeFlags
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>      <span class="nx">bubbleProperties</span><span class="p">(</span><span class="nx">workInProgress</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">mount 阶段 
+    <div id="mount-%E9%98%B6%E6%AE%B5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#mount-%E9%98%B6%E6%AE%B5" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group"> 
+    <div id="heading" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#heading" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_posts\/test.md"
+        var oid_likes = "likes_posts\/test.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/test2/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Test2</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-01-13T14:37:39&#43;08:00">January 13, 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/tags/"
+            title="Tags">
+            
+            Tags
+          </a>
+        </li>
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href="/categories/"
+            title="Categories">
+            
+            Categories
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://funnilydog.github.io/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
