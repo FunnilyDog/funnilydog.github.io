@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Mon, 13 Jan 2025 14:49:24 +0800</lastBuildDate><atom:link href="https://funnilydog.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 14:37:39 +0800</lastBuildDate><atom:link href="https://funnilydog.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Test2</title>
@@ -26,6 +26,16 @@
       
       <guid>https://funnilydog.github.io/posts/test/</guid>
       <description></description>
+      
+    </item>
+    
+    <item>
+      <title>React18 阅读笔记2</title>
+      <link>https://funnilydog.github.io/notes/test1/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://funnilydog.github.io/notes/test1/</guid>
+      <description>整理 react 18 源码 render 方法 的整体流程 每个步骤做了什么</description>
       
     </item>
     

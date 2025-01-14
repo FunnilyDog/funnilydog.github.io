@@ -19,41 +19,32 @@
   weight = 10
 
 [[main]]
-  name = "Parent"
-  weight = 20
+  name = "随笔"
+  pageRef = "notes"
+  weight = 11
 
 [[main]]
-  name = "example sub-menu 1"
-  parent = "Parent"
-  pageRef = "posts"
-  weight = 20
+  name = "标签"
+  pageRef = "tags"
+  weight = 30
 
-[[main]]
-  name = "example sub-menu 2"
-  parent = "Parent"
-  pageRef = "posts"
-  weight = 20
+#[[main]]
+#  name = "example sub-menu 1"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
 
-#[[subnavigation]]
-#  name = "An interesting topic"
-#  pageRef = "tags/interesting-topic"
-#  weight = 10
+#[[main]]
+#  name = "example sub-menu 2"
+#  parent = "Parent"
+#  pageRef = "posts"
+#  weight = 20
 
 #[[subnavigation]]
 #  name = "FunnilyDog"
 #  pre = "github"
 #  pageRef = "https://github.com/FunnilyDog?tab=repositories"
 #  weight = 20
-
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
-
-#[[main]]
-#  name = "Tags"
-#  pageRef = "tags"
-#  weight = 30
 
 
 # -- Footer Menu --
