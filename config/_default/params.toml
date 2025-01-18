@@ -14,7 +14,7 @@ enableCodeCopy = false
 
 replyByEmail = false
 
-# mainSections = ["section1", "section2"]
+# mainSections = ["notes/react"]
 # robots = ""
 
 disableImageOptimization = false
@@ -32,7 +32,7 @@ giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [header]
-  layout = "basic" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
+  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-gradient, fixed-fill-blur
 
 [footer]
   showMenu = false
@@ -55,13 +55,13 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = true
-  showLikes = true
+  showViews = false
+  showLikes = false
   showDateOnlyInArticle = true
-  showDateUpdated = false
-  showAuthor = true
+  showDateUpdated = true
+  showAuthor = false
   # showAuthorBottom = false
-  showHero = true
+  showHero = false
   heroStyle = "big" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
@@ -70,7 +70,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   showEdit = false
   # editURL = "https://github.com/username/repo/"
   editAppendPath = true
-  seriesOpened = false
+  seriesOpened = true
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false

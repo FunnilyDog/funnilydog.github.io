@@ -28,17 +28,17 @@
   pageRef = "tags"
   weight = 30
 
-#[[main]]
-#  name = "example sub-menu 1"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+  name = "react 阅读笔记"
+  parent = "notes"
+  pageRef = "notes/react"
+  weight = 20
 
-#[[main]]
-#  name = "example sub-menu 2"
-#  parent = "Parent"
-#  pageRef = "posts"
-#  weight = 20
+[[main]]
+  name = "其他"
+  parent = "notes"
+  pageRef = "posts/react"
+  weight = 20
 
 #[[subnavigation]]
 #  name = "FunnilyDog"
