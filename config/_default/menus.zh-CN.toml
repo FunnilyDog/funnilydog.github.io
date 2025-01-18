@@ -30,13 +30,13 @@
 
 [[main]]
   name = "react 阅读笔记"
-  parent = "notes"
+  parent = "随笔"
   pageRef = "notes/react"
   weight = 20
 
 [[main]]
   name = "其他"
-  parent = "notes"
+  parent = "随笔"
   pageRef = "posts/react"
   weight = 20
 
