@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/root/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=root/livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="zh-CN" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>八股文 -- 计算机网络 &middot; FunnilyDog‘s Site</title>
+  <meta name="title" content="八股文 -- 计算机网络 &middot; FunnilyDog‘s Site" />
+  
+  <meta name="description" content="记录 整理遇到的八股文知识点之 计算机网络篇" />
+  <meta name="keywords" content="javascript, http, notes, " />
+  
+  
+  <link rel="canonical" href="http://localhost:1313/root/notes/bsc_notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/root/css/main.bundle.min.1c9cd0d1ebaf117272b5c4f6bd49878475cb210d5e0da4f061632d779f5bb46851881c187e6e634dba5071c4e3d80e7d5cec1dd80443b2fa68acd358f9eda881.css"
+    integrity="sha512-HJzQ0euvEXJytcT2vUmHhHXLIQ1eDaTwYWMtd59btGhRiBwYfm5jTbpQccTj2A59XOwd2ARDsvporNNY&#43;e2ogQ==" />
+  
+  
+  <script type="text/javascript" src="/root/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/root/js/main.bundle.min.38829a2d46667b3048ed12a339f7a49584d39596241b4e61e344c689c257fec016f6e18ea8a349c0a7e2b35a3ef0ab2aed556a64100ada730fc9666da5b7c29a.js"
+    integrity="sha512-OIKaLUZmezBI7RKjOfeklYTTlZYkG05h40TGicJX/sAW9uGOqKNJwKfis1o&#43;8Ksq7VVqZBAK2nMPyWZtpbfCmg==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/root/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/root/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/root/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/root/favicon-16x16.png" />
+  <link rel="manifest" href="/root/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/root/notes/bsc_notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+  <meta property="og:site_name" content="FunnilyDog‘s Site">
+  <meta property="og:title" content="八股文 -- 计算机网络">
+  <meta property="og:description" content="记录 整理遇到的八股文知识点之 计算机网络篇">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="notes">
+    <meta property="article:published_time" content="2025-01-19T21:38:54+08:00">
+    <meta property="article:modified_time" content="2025-01-19T21:38:54+08:00">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="Http">
+    <meta property="article:tag" content="Notes">
+      <meta property="og:see_also" content="http://localhost:1313/root/notes/bsc_notes/engineer/">
+      <meta property="og:see_also" content="http://localhost:1313/root/notes/bsc_notes/js/">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="八股文 -- 计算机网络">
+  <meta name="twitter:description" content="记录 整理遇到的八股文知识点之 计算机网络篇">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Notes",
+    "name": "八股文 -- 计算机网络",
+    "headline": "八股文 -- 计算机网络",
+    
+    "abstract": "记录 整理遇到的八股文知识点之 计算机网络篇",
+    "inLanguage": "zh-CN",
+    "url" : "http:\/\/localhost:1313\/root\/notes\/bsc_notes\/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C\/",
+    "author" : {
+      "@type": "Person",
+      "name": "FunnilyDog‘s Site"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-01-19T21:38:54\u002b08:00",
+    "datePublished": "2025-01-19T21:38:54\u002b08:00",
+    
+    "dateModified": "2025-01-19T21:38:54\u002b08:00",
+    
+    "keywords": ["javascript","http","notes"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "491"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="FunnilyDog‘s Site" />
+  
+  
+  
+
+<script src="/root/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>跳过正文</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3">
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+            <a href="/root/" class="text-base font-medium text-gray-500 hover:text-gray-900">FunnilyDog‘s Site</a>
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/root/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Blog
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/root/react/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="Reacts">
+        react 阅读笔记
+    </p>
+</a>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        八股文
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+
+
+            
+            
+            <div class=" flex items-center">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button"
+                    class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+                    <div class="flex items-center justify-center dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button"
+                class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+                <div class="flex items-center justify-center dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/root/posts/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Blog
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/root/react/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="Reacts">
+            react 阅读笔记
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            八股文
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+ 
+  
+   
+  
+ 
+
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/root/imgs/web_bg_hu3121495979313281154.webp);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      八股文 -- 计算机网络
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-01-19T21:38:54&#43;08:00">2025-01-19</time><span class="px-2 text-primary-500">&middot;</span><span>491 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/root/tags/javascript/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Javascript
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/root/tags/http/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Http
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/root/tags/notes/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Notes
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+
+      
+
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#url-uri-urn">url uri urn</a></li>
+    <li><a href="#http-https">http https</a>
+      <ul>
+        <li><a href="#http-10">http 1.0</a></li>
+        <li><a href="#http11">http1.1</a></li>
+        <li><a href="#http20">http2.0</a></li>
+        <li><a href="#http30">http3.0</a></li>
+        <li><a href="#http-缓存">http 缓存</a></li>
+      </ul>
+    </li>
+    <li><a href="#ajax-fetch">ajax fetch</a>
+      <ul>
+        <li><a href="#ajax">ajax</a></li>
+        <li><a href="#fetch">fetch</a></li>
+        <li><a href="#区别">区别</a></li>
+      </ul>
+    </li>
+    <li><a href="#跨域">跨域</a>
+      <ul>
+        <li><a href="#跨域资源共享cors">跨域资源共享（CORS）</a></li>
+        <li><a href="#代理服务器">代理服务器</a></li>
+        <li><a href="#jsonp--windowname">JSONP &amp; window.name</a></li>
+      </ul>
+    </li>
+    <li><a href="#web-安全">Web 安全</a></li>
+    <li><a href="#csp">CSP</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#url-uri-urn">url uri urn</a></li>
+    <li><a href="#http-https">http https</a>
+      <ul>
+        <li><a href="#http-10">http 1.0</a></li>
+        <li><a href="#http11">http1.1</a></li>
+        <li><a href="#http20">http2.0</a></li>
+        <li><a href="#http30">http3.0</a></li>
+        <li><a href="#http-缓存">http 缓存</a></li>
+      </ul>
+    </li>
+    <li><a href="#ajax-fetch">ajax fetch</a>
+      <ul>
+        <li><a href="#ajax">ajax</a></li>
+        <li><a href="#fetch">fetch</a></li>
+        <li><a href="#区别">区别</a></li>
+      </ul>
+    </li>
+    <li><a href="#跨域">跨域</a>
+      <ul>
+        <li><a href="#跨域资源共享cors">跨域资源共享（CORS）</a></li>
+        <li><a href="#代理服务器">代理服务器</a></li>
+        <li><a href="#jsonp--windowname">JSONP &amp; window.name</a></li>
+      </ul>
+    </li>
+    <li><a href="#web-安全">Web 安全</a></li>
+    <li><a href="#csp">CSP</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5"  open >
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 查缺补漏 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/root/notes/bsc_notes/engineer/">
+            § : 八股文 -- 工程化
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § : 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/root/notes/bsc_notes/js/">
+            § : 八股文 -- JS
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h2 class="relative group">url uri urn 
+    <div id="url-uri-urn" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#url-uri-urn" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>URI 语法：scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
+Scheme：URI 的起始点，并与 URI 协议相关。URI schema 对大小写不敏感，后面带有一个“:”。几个流行的 URI schema 的例子：HTTP、HTTPS、FTP 和 mailto。
+Authority（权限）：Authority 字段是位于 schema 字段之后的第二个条目，以两个斜杠(//)开头。这个字段由多个子字段组成：
+• authentication（认证信息）-可选的字段和用户名，密码，由冒号隔开，后面跟着“@”符号
+• host（主机名）—注册的名称或 IP 地址，出现在“@”符号之后
+• port（端口号）-可选字段，后面跟着一个冒号
+Path（路径）：Path 是第三个字段，由斜杠分隔的段序列来表示，用来提供资源的位置。注意，不管 authority 部分存在或不存在，path 都应该以一个斜杠开始，而不是双斜杠(//)。
+Query（查询）：Query 是第四个字段，是 URI 的可选字段，包含一串非结构数据并以“?”和 Path 隔开。
+Fragment（片段）：Fragment 是第五个组成部分，也是一个可选字段，提供指向辅助资源的方向，并以“#”开始。简单来说，Fragment 字段可以用于指向 HTML 页面的特定元素(主资源)。</p>
+<p>url（统一资源定位符），用于标示网络资源的位置。URL 是一个给定唯一 Web 资源的地址，表明了这个唯一的 Web 资源的位置，用户可以通过 URL 浏览互联网。如果我们在任何应用程序中点击任何超链接，它会将我们重定向到相关的 URL，这些 URL 也可以很容易的输入到浏览器地址栏中，并可以加载特定的资源。</p>
+<p>URN 是一种具有静态名称的互联网资源，即使它的数据被移动到另一个位置也仍然有效。URL 在内容被移动后就失效了，与之不同的是，URN 可以始终跟踪 Web 上某些数据的资源，从而解决了频繁移动数据的问题。
+URN 语法：scheme:NID: NSS</p>
+
+
+<h2 class="relative group">http https 
+    <div id="http-https" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http-https" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">http 1.0 
+    <div id="http-10" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http-10" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>无状态、无连接的应用层协议，一次只能发出一个未完成的请求</p>
+
+
+<h3 class="relative group">http1.1 
+    <div id="http11" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http11" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; 基于 connection：keep-alive 建立持久链接，
+&ndash; 基于管道可以一次发出多个请求，但服务端依旧需要按顺序响应。
+&ndash; 新增 身份认证、缓存等机制相关的请求头。
+&ndash; HTTP1.1 的请求消息和响应消息都应支持 Host 头域</p>
+
+
+<h3 class="relative group">http2.0 
+    <div id="http20" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http20" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; 采用二进制消息帧，建立请求优先级
+帧(frame)包含部分：类型 Type, 长度 Length, 标记 Flags, 流标识 Stream 和 frame payload 有效载荷
+消息(message)：一个完整的请求或者响应，比如请求、响应等，由一个或多个 Frame 组成。</p>
+<p>&ndash; 多路复用
+请求响应都采用流式数据在同一个 tcp 通道内传输，通过 流标识 进行同一个 请求响应 的匹配。
+&ndash; 头部压缩 http2.0 头部也采用二进制数据格式，利用 HPACK 压缩算法（维护一张 header 字段表，利用索引代替实际 header）
+&ndash; 服务器推送
+服务器可以对一个客户端请求发送多个响应，服务器向客户端推送资源无需客户端明确地请求</p>
+
+
+<h3 class="relative group">http3.0 
+    <div id="http30" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http30" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; 采用 QUIC 协议（基于 UDP） 解决了 TCP 协议 头包丢失导致的阻塞问题</p>
+
+
+<h3 class="relative group">http 缓存 
+    <div id="http-%E7%BC%93%E5%AD%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#http-%E7%BC%93%E5%AD%98" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>强缓存：浏览器会检测缓存时间是否过期，若未过期则不会向服务器发请求转而直接从缓存中读取。
+在 http1.1 后改由请求头 cache-control 中的 max-age 控制。
+命中强缓存 状态码返回 200 size 为 form disk cache / memory cache。</p>
+<p>协商缓存：浏览器优先检测是否命中强缓存，若未命中强缓存则浏览器携带协商缓存标识向服务器发起请求，由服务器根据缓存标识确定是否使用缓存，若生效则返回状态码 304，否则正常返回 200 和请求资源。
+缓存是否失效 由 Last-Modified / If-Modified-Since 和 ETag 决定。
+浏览器首次请求资源时服务器会在响应头中给到 Last-Modified ，浏览器再次请求该资源时 会在请求头中添加 If-Modified-Since 由服务器判断缓存资源是否失效。
+由于 Last-Modified 只能精确到秒级，可能会导致已失效缓存被误判，且如果本地打开缓存文件也会更新 Last-Modified 。因此 Etag 是服务器响应请求时，返回当前资源文件的一个唯一标识(由服务器生成)，只要资源有变化，Etag 就会重新生成。</p>
+
+
+<h2 class="relative group">ajax fetch 
+    <div id="ajax-fetch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ajax-fetch" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">ajax 
+    <div id="ajax" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#ajax" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span> <span class="c1">// 创建 xhr 操作对象 readyState = 0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;get&#34;</span><span class="p">,</span> <span class="s2">&#34;http://jsonplaceholder.typicode.com/posts/2&#34;</span><span class="p">);</span> <span class="c1">// 建立请求 readyState = 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;123&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="sr">/\*_ 请求体可以放这里 _/</span><span class="p">);</span> <span class="c1">// 发送请求 readyState = 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// readyState = 3 说明正在接收服务器传来的 body 部分的数据
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="mi">4</span> <span class="o">&amp;&amp;</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span> <span class="o">===</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// readyState = 4 说明数据完全接收
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">response</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nx">xhr</span><span class="p">.</span><span class="nx">onprogress</span> <span class="o">=</span> <span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">lengthComputable</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 表示底层流程将需要完成的总工作量和已经完成的工作量是否可以计算
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">total</span><span class="p">);</span> <span class="c1">// 表示正在执行的底层流程的工作总量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">p</span><span class="p">.</span><span class="nx">loaded</span><span class="p">);</span> <span class="c1">// 表示底层流程已经执行的工作总量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">fetch 
+    <div id="fetch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#fetch" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; 请求实例</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;http://jsonplaceholder.typicode.com/posts&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//请求方法
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">method</span><span class="o">:</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//请求头
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;zhang&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">//请求体
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">body</span>: <span class="kt">JSON.stringify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">id</span>: <span class="kt">1</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span></code></pre></div><p>&ndash; 中断请求：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AbortController</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">signal</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">controller</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;http://&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">signal</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="nx">controller</span><span class="p">.</span><span class="nx">abort</span><span class="p">();</span>
+</span></span></code></pre></div>
+
+<h3 class="relative group">区别 
+    <div id="%E5%8C%BA%E5%88%AB" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E5%8C%BA%E5%88%AB" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; fetch 使用 promise、 XMLHttpRequest 则使用回调的方式(需要开发手动包装 promise)
+&ndash; fetch 只有在中断请求或网络故障或配置错误时才会被标记 reject，其他时候都是 resolve；XHR 则需要在 onReadyStateChange 回调里自行判断
+&ndash; XHR 拥有 onProgress 回调监控传输进度
+&ndash; fetch 将请求分成了多个模型（Request、Responce、Headers）; XMLHttpRequest 只有一个自己的实例。
+&ndash; fetch 通过数据流处理数据，可以分块读取；XMLHTTPRequest 对象不支持数据流，所有的数据必须放在缓存里，不支持分块读取，必须等待全部拿到后，再一次性吐出来</p>
+
+
+<h2 class="relative group">跨域 
+    <div id="%E8%B7%A8%E5%9F%9F" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%B7%A8%E5%9F%9F" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>什么是跨域： 请求 url 的协议 域名 端口 中任意一个与当前页面 url 不同即为跨域
+原因： 浏览器的同源策略规定非同源请求不能被浏览器所接受以防止 xss csrf 攻击</p>
+<p>解决方案：</p>
+
+
+<h3 class="relative group">跨域资源共享（CORS） 
+    <div id="%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%ABcors" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E8%B7%A8%E5%9F%9F%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%ABcors" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>&ndash; 简单请求 浏览器会自动带上 Origin 请求头 服务器端验证 Origin 在白名单内则返回时添加 Access-Control-Allow-Origin 响应头告诉浏览器 允许该 Origin 访问
+简单请求判断标准：
+a. 请求方法为 GET、POST、HEAD
+b. 请求头只允许出现 CORS 安全规范定义的标头集合
+c. 请求中没有使用 ReadableStream 对象</p>
+<p>&ndash; 非简单请求则需要在正式发起请求前进行 OPTIONS 预请求，该请求携带 Origin、Access-Control-Request-Method、Access-Control-Request-Headers 等请求头以便服务器验证是否允许实际请求。</p>
+
+
+<h3 class="relative group">代理服务器 
+    <div id="%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h3 class="relative group">JSONP &amp; window.name 
+    <div id="jsonp--windowname" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#jsonp--windowname" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+
+<h2 class="relative group">Web 安全 
+    <div id="web-%E5%AE%89%E5%85%A8" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#web-%E5%AE%89%E5%85%A8" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li>
+<p>XSS（跨站脚本攻击）
+原理： 向目标网站注入脚本以获取用户信息等。
+分类： 存储型（向服务器发送攻击脚本，存储在服务器中，用户正常请求时受到攻击），反射型（恶意链接），基于 DOM
+防御： 浏览器/服务器端做好特殊字符转换校验，重要 cookie 可设置 httpOnly 属性防止被窃取。利用 csp 禁止除安全脚本以外的脚本运行。</p>
+</li>
+<li>
+<p>CSRF(跨站请求伪造)
+原理：诱导用户打开三方网站，利用用户的登录态发起跨站请求。
+分类：
+自动发起 Get 请求(利用 img 等 src 属性)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://time.geekbang.org/sendcoin?user=hacker&amp;number=100&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></div><p>自动发起 Post 请求（利用隐藏表单自动提交 ）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span> <span class="p">(</span><span class="s1">&#39;hacker-form&#39;</span><span class="p">).</span><span class="nx">submit</span><span class="p">();&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>不良链接</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">img</span> <span class="na">width</span><span class="o">=</span><span class="s">150</span> <span class="na">src</span><span class="o">=</span><span class="s">http://images.xuejuzi.cn/1612/1-161230185104_1.jpg</span><span class="p">&gt;&lt;/</span><span class="nt">img</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://time.geekbang.org/sendcoin?user=hacker&amp;number=100&#34;</span> <span class="na">taget</span><span class="o">=</span><span class="s">&#34;\_bla 点击下载美女照片&#34;</span>
+</span></span></code></pre></div></li>
+</ol>
+<p>防御：
+通过设置 Access-Control-Allow-Origin 不允许或只允许安全域名下发起请求
+利用 cookie 的 SameSite 属性 禁止三方请求发送重要 cookie。
+利用 token 验证是否为合法三方请求。</p>
+
+
+<h2 class="relative group">CSP 
+    <div id="csp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#csp" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>定义：CSP 是一种用于增强网站安全的策略，他通过限制网页内容的来源和执行的方式来减少恶意攻击。</p>
+<p>原理：
+· 服务器设置策略：服务器端通过相应头 content-security-policy / content-security-policy-report-only 来设置 CSP 策略。
+· 浏览器执行策略：浏览器加载网页时，会根据服务器端返回的 csp 策略限制网页中各种资源的加载和执行，并阻止不符合策略的操作。
+· 检查资源来源：浏览器会检查网页中所有资源的来源是否符合 CSP 策略中定义的规则，如果资源的来源于策略不匹配，浏览器组织加载该资源。
+· 限制脚本执行：CSP 还可以通过禁止或限制内连脚本的执行来阻止 XSS 攻击。</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+<details style="margin-left:0px" class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5">
+    
+    <summary
+        class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+        八股文 查缺补漏 - 这篇文章属于一个选集。
+    </summary>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/root/notes/bsc_notes/engineer/">
+            § : 八股文 -- 工程化
+        </a>
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        § : 本文
+    </div>
+    
+    
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/root/notes/bsc_notes/js/">
+            § : 八股文 -- JS
+        </a>
+    </div>
+    
+    
+
+
+</details>
+
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_notes\/bsc_notes\/计算机网络\/index.md"
+        var oid_likes = "likes_notes\/bsc_notes\/计算机网络\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/root/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/root/notes/bsc_notes/js/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >八股文 -- JS</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-01-19T18:50:55&#43;08:00">2025-01-19</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/root/notes/bsc_notes/engineer/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >八股文 -- 工程化</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-01-19T21:53:21&#43;08:00">2025-01-19</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部" title="返回顶部">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2025
+      FunnilyDog‘s Site
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      由 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 强力驱动
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/root/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+
+  </div>
+</body>
+
+</html>

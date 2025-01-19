@@ -2,12 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on FunnilyDog‘s Site</title>
-    <link>https://funnilydog.github.io/tags/</link>
+    <link>http://localhost:1313/root/tags/</link>
     <description>Recent content in Tags on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <atom:link href="https://funnilydog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/root/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Http</title>
+      <link>http://localhost:1313/root/tags/http/</link>
+      <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/root/tags/http/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://localhost:1313/root/tags/javascript/</link>
+      <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/root/tags/javascript/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Notes</title>
+      <link>http://localhost:1313/root/tags/notes/</link>
+      <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/root/tags/notes/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/root/tags/react/</link>
+      <pubDate>Sat, 18 Jan 2025 14:57:48 +0800</pubDate>
+      
+      <guid>http://localhost:1313/root/tags/react/</guid>
+      <description></description>
+      
+    </item>
     
   </channel>
 </rss>

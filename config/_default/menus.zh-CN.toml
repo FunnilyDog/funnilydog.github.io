@@ -19,26 +19,20 @@
   weight = 10
 
 [[main]]
-  name = "随笔"
-  pageRef = "notes"
-  weight = 11
-
-[[main]]
-  name = "标签"
-  pageRef = "tags"
-  weight = 30
-
-[[main]]
   name = "react 阅读笔记"
-  parent = "随笔"
-  pageRef = "notes/react"
+  pageRef = "react"
   weight = 20
 
 [[main]]
-  name = "其他"
-  parent = "随笔"
-  pageRef = "posts/react"
+  name = "八股文"
+  # parent = "随笔"
+  pageRef = "notes"
   weight = 20
+
+#[[main]]
+#  name = "标签"
+#  pageRef = "tags"
+#  weight = 30
 
 #[[subnavigation]]
 #  name = "FunnilyDog"
