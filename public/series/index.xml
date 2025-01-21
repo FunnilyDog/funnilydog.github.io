@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on FunnilyDog‘s Site</title>
-    <link>http://localhost:1313/series/</link>
+    <link>https://funnilydog.github.io/series/</link>
     <description>Recent content in Series on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Sun, 19 Jan 2025 21:53:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 21:53:21 +0800</lastBuildDate><atom:link href="https://funnilydog.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>八股文 查缺补漏</title>
-      <link>http://localhost:1313/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</link>
+      <link>https://funnilydog.github.io/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</link>
       <pubDate>Sun, 19 Jan 2025 21:53:21 +0800</pubDate>
       
-      <guid>http://localhost:1313/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</guid>
+      <guid>https://funnilydog.github.io/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>React18 阅读笔记</title>
-      <link>http://localhost:1313/series/react18-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sun, 19 Jan 2025 18:45:18 +0800</pubDate>
+      <link>https://funnilydog.github.io/series/react18-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 18 Jan 2025 14:57:48 +0800</pubDate>
       
-      <guid>http://localhost:1313/series/react18-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://funnilydog.github.io/series/react18-%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
       
     </item>
