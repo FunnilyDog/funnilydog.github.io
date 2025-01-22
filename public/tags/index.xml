@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on FunnilyDog‘s Site</title>
-    <link>https://funnilydog.github.io/tags/</link>
+    <link>http://blog.funnilydog.top/root/public/tags/</link>
     <description>Recent content in Tags on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="https://funnilydog.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/root/public/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Http</title>
-      <link>https://funnilydog.github.io/tags/http/</link>
+      <link>http://blog.funnilydog.top/root/public/tags/http/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>https://funnilydog.github.io/tags/http/</guid>
+      <guid>http://blog.funnilydog.top/root/public/tags/http/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Javascript</title>
-      <link>https://funnilydog.github.io/tags/javascript/</link>
+      <link>http://blog.funnilydog.top/root/public/tags/javascript/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>https://funnilydog.github.io/tags/javascript/</guid>
+      <guid>http://blog.funnilydog.top/root/public/tags/javascript/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Notes</title>
-      <link>https://funnilydog.github.io/tags/notes/</link>
+      <link>http://blog.funnilydog.top/root/public/tags/notes/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>https://funnilydog.github.io/tags/notes/</guid>
+      <guid>http://blog.funnilydog.top/root/public/tags/notes/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>React</title>
-      <link>https://funnilydog.github.io/tags/react/</link>
+      <link>http://blog.funnilydog.top/root/public/tags/react/</link>
       <pubDate>Sat, 18 Jan 2025 14:57:48 +0800</pubDate>
       
-      <guid>https://funnilydog.github.io/tags/react/</guid>
+      <guid>http://blog.funnilydog.top/root/public/tags/react/</guid>
       <description></description>
       
     </item>
