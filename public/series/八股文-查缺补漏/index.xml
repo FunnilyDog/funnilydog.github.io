@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>八股文 查缺补漏 on FunnilyDog‘s Site</title>
-    <link>http://blog.funnilydog.top/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</link>
+    <link>http://localhost:1313/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/</link>
     <description>Recent content in 八股文 查缺补漏 on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Sun, 19 Jan 2025 21:53:21 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 21:53:21 +0800</lastBuildDate><atom:link href="http://localhost:1313/series/%E5%85%AB%E8%82%A1%E6%96%87-%E6%9F%A5%E7%BC%BA%E8%A1%A5%E6%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>八股文 -- 工程化</title>
-      <link>http://blog.funnilydog.top/notes/engineer/</link>
+      <link>http://localhost:1313/notes/engineer/</link>
       <pubDate>Sun, 19 Jan 2025 21:53:21 +0800</pubDate>
       
-      <guid>http://blog.funnilydog.top/notes/engineer/</guid>
+      <guid>http://localhost:1313/notes/engineer/</guid>
       <description>记录 整理遇到的八股文知识点之 工程化篇</description>
       
     </item>
     
     <item>
-      <title>八股文 -- 计算机网络</title>
-      <link>http://blog.funnilydog.top/nginx/config/</link>
+      <title>docker 运行配置 nginx</title>
+      <link>http://localhost:1313/hugo/config/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>http://blog.funnilydog.top/nginx/config/</guid>
-      <description>记录 整理遇到的八股文知识点之 计算机网络篇</description>
+      <guid>http://localhost:1313/hugo/config/</guid>
+      <description>docker 部署 静态网站之</description>
       
     </item>
     
     <item>
       <title>八股文 -- 计算机网络</title>
-      <link>http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description>记录 整理遇到的八股文知识点之 计算机网络篇</description>
       
     </item>
     
     <item>
       <title>八股文 -- JS</title>
-      <link>http://blog.funnilydog.top/notes/js/</link>
+      <link>http://localhost:1313/notes/js/</link>
       <pubDate>Sun, 19 Jan 2025 18:50:55 +0800</pubDate>
       
-      <guid>http://blog.funnilydog.top/notes/js/</guid>
+      <guid>http://localhost:1313/notes/js/</guid>
       <description>记录 整理遇到的八股文知识点之 js篇</description>
       
     </item>

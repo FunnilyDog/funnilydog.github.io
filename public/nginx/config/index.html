@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
-  data-auto-appearance="true"><head>
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8" />
   
   <meta http-equiv="content-language" content="zh-CN" />
@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>八股文 -- 计算机网络 &middot; FunnilyDog‘s Site</title>
-  <meta name="title" content="八股文 -- 计算机网络 &middot; FunnilyDog‘s Site" />
+  <title>docker 运行配置 nginx &middot; FunnilyDog‘s Site</title>
+  <meta name="title" content="docker 运行配置 nginx &middot; FunnilyDog‘s Site" />
   
-  <meta name="description" content="记录 整理遇到的八股文知识点之 计算机网络篇" />
-  <meta name="keywords" content="javascript, http, notes, " />
+  <meta name="description" content="docker 部署 静态网站之" />
+  <meta name="keywords" content="nginx, docker, notes, " />
   
   
-  <link rel="canonical" href="http://blog.funnilydog.top/nginx/config/" />
+  <link rel="canonical" href="http://localhost:1313/nginx/config/" />
   
   
   
@@ -60,26 +60,26 @@
   
   
   
-  <meta property="og:url" content="http://blog.funnilydog.top/nginx/config/">
+  <meta property="og:url" content="http://localhost:1313/nginx/config/">
   <meta property="og:site_name" content="FunnilyDog‘s Site">
-  <meta property="og:title" content="八股文 -- 计算机网络">
-  <meta property="og:description" content="记录 整理遇到的八股文知识点之 计算机网络篇">
+  <meta property="og:title" content="docker 运行配置 nginx">
+  <meta property="og:description" content="docker 部署 静态网站之">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="nginx">
     <meta property="article:published_time" content="2025-01-19T21:38:54+08:00">
     <meta property="article:modified_time" content="2025-01-19T21:38:54+08:00">
-    <meta property="article:tag" content="Javascript">
-    <meta property="article:tag" content="Http">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Notes">
-      <meta property="og:see_also" content="http://blog.funnilydog.top/notes/engineer/">
-      <meta property="og:see_also" content="http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
-      <meta property="og:see_also" content="http://blog.funnilydog.top/notes/js/">
+      <meta property="og:see_also" content="http://localhost:1313/notes/engineer/">
+      <meta property="og:see_also" content="http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      <meta property="og:see_also" content="http://localhost:1313/notes/js/">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="八股文 -- 计算机网络">
-  <meta name="twitter:description" content="记录 整理遇到的八股文知识点之 计算机网络篇">
+  <meta name="twitter:title" content="docker 运行配置 nginx">
+  <meta name="twitter:description" content="docker 部署 静态网站之">
 
   
   <script type="application/ld+json">
@@ -87,12 +87,12 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Nginxes",
-    "name": "八股文 -- 计算机网络",
-    "headline": "八股文 -- 计算机网络",
+    "name": "docker 运行配置 nginx",
+    "headline": "docker 运行配置 nginx",
     
-    "abstract": "记录 整理遇到的八股文知识点之 计算机网络篇",
+    "abstract": "docker 部署 静态网站之",
     "inLanguage": "zh-CN",
-    "url" : "http:\/\/blog.funnilydog.top\/nginx\/config\/",
+    "url" : "http:\/\/localhost:1313\/nginx\/config\/",
     "author" : {
       "@type": "Person",
       "name": "FunnilyDog‘s Site"
@@ -103,7 +103,7 @@
     
     "dateModified": "2025-01-19T21:38:54\u002b08:00",
     
-    "keywords": ["javascript","http","notes"],
+    "keywords": ["nginx","docker","notes"],
     
     "mainEntityOfPage": "true",
     "wordCount": "6"
@@ -442,7 +442,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      八股文 -- 计算机网络
+      docker 运行配置 nginx
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -511,18 +511,18 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/javascript/&#34;,'_self');return false;">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/nginx/&#34;,'_self');return false;">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Javascript
+    Nginx
   </span>
 </span>
   </span>
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/http/&#34;,'_self');return false;">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/docker/&#34;,'_self');return false;">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Http
+    Docker
   </span>
 </span>
   </span>
@@ -647,7 +647,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/engineer/">
+        <a href="http://localhost:1313/notes/engineer/">
             § : 八股文 -- 工程化
         </a>
     </div>
@@ -656,7 +656,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a href="http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             § : 八股文 -- 计算机网络
         </a>
     </div>
@@ -665,7 +665,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/js/">
+        <a href="http://localhost:1313/notes/js/">
             § : 八股文 -- JS
         </a>
     </div>
@@ -718,7 +718,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/engineer/">
+        <a href="http://localhost:1313/notes/engineer/">
             § : 八股文 -- 工程化
         </a>
     </div>
@@ -727,7 +727,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+        <a href="http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
             § : 八股文 -- 计算机网络
         </a>
     </div>
@@ -736,7 +736,7 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://blog.funnilydog.top/notes/js/">
+        <a href="http://localhost:1313/notes/js/">
             § : 八股文 -- JS
         </a>
     </div>

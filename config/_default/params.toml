@@ -55,8 +55,8 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 [article]
   showDate = true
-  showViews = false
-  showLikes = false
+  showViews = true
+  showLikes = true
   showDateOnlyInArticle = true
   showDateUpdated = true
   showAuthor = false
@@ -126,13 +126,13 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+   apiKey = "AIzaSyDw86JLtP-SQbIrjHrPXmXkSo7b0OQmd4c"
+   authDomain = "dx-firebase-17aba.firebaseapp.com"
+   projectId = "dx-firebase-17aba"
+   storageBucket = "dx-firebase-17aba.firebasestorage.app"
+   messagingSenderId = "733298373600"
+   appId = "1:733298373600:web:1d4af16416c27be12ef185"
+   measurementId = "G-2TYX8E9FTZ"
 
 [fathomAnalytics]
   # site = "ABC12345"
@@ -166,3 +166,9 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 [rssnext]
   # feedId = ""
   # userId = ""
+
+[params.waline]
+  serverURL = "https://my-waline-op5f1xvg5-funnilydogs-projects.vercel.app/" # 你的 Waline 服务端地址
+  lang = "zh-CN" # 语言设置
+
+# 8DB1D

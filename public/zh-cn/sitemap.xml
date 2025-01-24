@@ -3,101 +3,107 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://blog.funnilydog.top/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-01-19T21:53:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://blog.funnilydog.top/en/"
+      href="http://localhost:1313/en/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="zh-CN"
-      href="http://blog.funnilydog.top/"
+      href="http://localhost:1313/"
     />
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/notes/</loc>
+    <loc>http://localhost:1313/notes/</loc>
     <lastmod>2025-01-19T21:53:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/notes/engineer/</loc>
+    <loc>http://localhost:1313/notes/engineer/</loc>
     <lastmod>2025-01-19T21:53:21+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/nginx/</loc>
+    <loc>http://localhost:1313/hugo/config/</loc>
     <lastmod>2025-01-19T21:38:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/nginx/config/</loc>
+    <loc>http://localhost:1313/hugo/</loc>
     <lastmod>2025-01-19T21:38:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <loc>http://localhost:1313/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2025-01-19T21:38:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/notes/js/</loc>
+    <loc>http://localhost:1313/notes/js/</loc>
     <lastmod>2025-01-19T18:50:55+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/</loc>
+    <loc>http://localhost:1313/react/debug/</loc>
     <lastmod>2025-01-19T18:45:18+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/beginwork_update/</loc>
+    <loc>http://localhost:1313/react/</loc>
+    <lastmod>2025-01-19T18:45:18+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/react/beginwork_update/</loc>
     <lastmod>2025-01-18T14:57:48+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/completework/</loc>
+    <loc>http://localhost:1313/react/completework/</loc>
     <lastmod>2025-01-18T13:05:52+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/beginwork_create/</loc>
+    <loc>http://localhost:1313/react/beginwork_create/</loc>
     <lastmod>2025-01-17T18:43:49+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/commit/</loc>
+    <loc>http://localhost:1313/react/commit/</loc>
     <lastmod>2025-01-17T18:41:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-01-13T14:37:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/posts/test2/</loc>
+    <loc>http://localhost:1313/posts/test2/</loc>
     <lastmod>2025-01-13T14:37:39+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://blog.funnilydog.top/react/render%E8%B0%83%E5%BA%A6/</loc>
+    <loc>http://localhost:1313/react/render%E8%B0%83%E5%BA%A6/</loc>
     <lastmod>2025-01-13T13:55:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
