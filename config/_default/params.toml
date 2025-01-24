@@ -170,5 +170,3 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 [params.waline]
   serverURL = "https://my-waline-op5f1xvg5-funnilydogs-projects.vercel.app/" # 你的 Waline 服务端地址
   lang = "zh-CN" # 语言设置
-
-# 8DB1D
