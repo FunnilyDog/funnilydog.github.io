@@ -3,18 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://blog.funnilydog.top/root/public/en/</loc>
+    <loc>http://blog.funnilydog.top/en/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
     <xhtml:link
       rel="alternate"
       hreflang="zh-CN"
-      href="http://blog.funnilydog.top/root/public/"
+      href="http://blog.funnilydog.top/"
     />
     <xhtml:link
       rel="alternate"
       hreflang="en"
-      href="http://blog.funnilydog.top/root/public/en/"
+      href="http://blog.funnilydog.top/en/"
     />
   </url>
 </urlset>

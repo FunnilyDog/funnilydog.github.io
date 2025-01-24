@@ -2,19 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Http on FunnilyDog‘s Site</title>
-    <link>http://blog.funnilydog.top/root/public/tags/http/</link>
+    <link>http://blog.funnilydog.top/tags/http/</link>
     <description>Recent content in Http on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/root/public/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/tags/http/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>八股文 -- 计算机网络</title>
-      <link>http://blog.funnilydog.top/root/public/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>http://blog.funnilydog.top/nginx/config/</link>
       <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
       
-      <guid>http://blog.funnilydog.top/root/public/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://blog.funnilydog.top/nginx/config/</guid>
+      <description>记录 整理遇到的八股文知识点之 计算机网络篇</description>
+      
+    </item>
+    
+    <item>
+      <title>八股文 -- 计算机网络</title>
+      <link>http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
+      
+      <guid>http://blog.funnilydog.top/notes/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description>记录 整理遇到的八股文知识点之 计算机网络篇</description>
       
     </item>

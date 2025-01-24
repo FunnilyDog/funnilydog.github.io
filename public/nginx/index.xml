@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginxes on FunnilyDog‘s Site</title>
+    <link>http://blog.funnilydog.top/nginx/</link>
+    <description>Recent content in Nginxes on FunnilyDog‘s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© 2025 FunnilyDog‘s Site</copyright>
+    <lastBuildDate>Sun, 19 Jan 2025 21:38:54 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>八股文 -- 计算机网络</title>
+      <link>http://blog.funnilydog.top/nginx/config/</link>
+      <pubDate>Sun, 19 Jan 2025 21:38:54 +0800</pubDate>
+      
+      <guid>http://blog.funnilydog.top/nginx/config/</guid>
+      <description>记录 整理遇到的八股文知识点之 计算机网络篇</description>
+      
+    </item>
+    
+  </channel>
+</rss>

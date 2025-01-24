@@ -3,7 +3,7 @@
 # https://blowfish.page/docs/getting-started/
 
 theme = "blowfish" # UNCOMMENT THIS LINE
-baseURL = "http://blog.funnilydog.top/root/public"
+baseURL = "http://blog.funnilydog.top"
 # baseURL = "https://funnilydog.github.io"
 defaultContentLanguage = "zh-CN"
 

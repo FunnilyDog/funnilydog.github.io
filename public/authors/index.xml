@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on FunnilyDog‘s Site</title>
-    <link>http://blog.funnilydog.top/root/public/authors/</link>
+    <link>http://blog.funnilydog.top/authors/</link>
     <description>Recent content in Authors on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <atom:link href="http://blog.funnilydog.top/root/public/authors/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.funnilydog.top/authors/index.xml" rel="self" type="application/rss+xml" />
     
   </channel>
 </rss>
