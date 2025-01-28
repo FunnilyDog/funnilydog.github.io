@@ -2,11 +2,15 @@
 title: "React18 阅读笔记 -- completeWork"
 date: 2025-01-18T13:05:52+08:00
 draft: false
-tags: ["react","javascript", "notes"]
+tags: ["react", "javascript", "notes"]
 summary: "workloop 的 归 阶段， 根据已经创建/更新 好的 fiber 开始构建真实dom，TODO:有时间需要再梳理一下"
 series: ["React18 阅读笔记"]
-series_order: 4
+series_order: 5
 ---
+
+## completeWork
+
+根据 workInProgress.tag 找到需要创建/更新 dom 的 tag，根据 fiber 创建/更新 dom
 
 ```ts
 // path: packages/react-reconciler/src/ReactFiberCompleteWork.old.js
@@ -60,7 +64,6 @@ function completeWork(
           newProps,
           rootContainerInstance
         );
-
       } else {
         if (!newProps) {
           bubbleProperties(workInProgress);
@@ -80,14 +83,19 @@ function completeWork(
         appendAllChildren(instance, workInProgress, false, false);
 
         workInProgress.stateNode = instance;
-
       }
       bubbleProperties(workInProgress);
       return null;
     }
   }
 }
+```
 
+### HostComponent
+
+root 根节点 进如的 case
+
+```ts
 export function updateHostComponent() {
   // ...
 

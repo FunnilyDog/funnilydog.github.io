@@ -79,9 +79,9 @@
     <meta property="article:tag" content="Notes">
     <meta property="og:image" content="http://localhost:1313/react/render%E8%B0%83%E5%BA%A6/feature.jpg">
       <meta property="og:see_also" content="http://localhost:1313/react/debug/">
-      <meta property="og:see_also" content="http://localhost:1313/react/beginwork_update/">
+      <meta property="og:see_also" content="http://localhost:1313/react/beginwork_case/">
       <meta property="og:see_also" content="http://localhost:1313/react/completework/">
-      <meta property="og:see_also" content="http://localhost:1313/react/beginwork_create/">
+      <meta property="og:see_also" content="http://localhost:1313/react/beginwork_fiber/">
       <meta property="og:see_also" content="http://localhost:1313/react/commit/">
 
   
@@ -115,7 +115,7 @@
     "keywords": ["react","javascript","notes"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1069"
+    "wordCount": "1104"
   }]
   </script>
 
@@ -519,7 +519,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-01-13T13:55:00&#43;08:00">2025-01-13</time><span class="px-2 text-primary-500">&middot;</span><span>1069 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
+  <time datetime="2025-01-13T13:55:00&#43;08:00">2025-01-13</time><span class="px-2 text-primary-500">&middot;</span><span>1104 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">6 分钟</span><span class="px-2 text-primary-500">&middot;</span><span>
   
   
     
@@ -681,7 +681,13 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#reactdomcreateroot">ReactDOM.createRoot</a></li>
-    <li><a href="#react">react</a></li>
+    <li><a href="#render-入口">render 入口</a></li>
+    <li><a href="#scheduleupdateonfiber">scheduleUpdateOnFiber</a></li>
+    <li><a href="#schedulecallback">scheduleCallback</a></li>
+    <li><a href="#flushwork">flushWork</a></li>
+    <li><a href="#performconcurrentworkonroot">performConcurrentWorkOnRoot</a></li>
+    <li><a href="#performunitofwork">performUnitOfWork</a></li>
+    <li><a href="#finishconcurrentrender">finishConcurrentRender</a></li>
   </ul>
 </nav>
   </div>
@@ -696,7 +702,13 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#reactdomcreateroot">ReactDOM.createRoot</a></li>
-    <li><a href="#react">react</a></li>
+    <li><a href="#render-入口">render 入口</a></li>
+    <li><a href="#scheduleupdateonfiber">scheduleUpdateOnFiber</a></li>
+    <li><a href="#schedulecallback">scheduleCallback</a></li>
+    <li><a href="#flushwork">flushWork</a></li>
+    <li><a href="#performconcurrentworkonroot">performConcurrentWorkOnRoot</a></li>
+    <li><a href="#performunitofwork">performUnitOfWork</a></li>
+    <li><a href="#finishconcurrentrender">finishConcurrentRender</a></li>
   </ul>
 </nav>
   </div>
@@ -757,15 +769,15 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        § 1: 本文
+        § 2: 本文
     </div>
     
     
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://localhost:1313/react/beginwork_create/">
-            § 2: React18 阅读笔记 -- beginwork fiber
+        <a href="http://localhost:1313/react/beginwork_fiber/">
+            § 3: React18 阅读笔记 -- beginwork fiber
         </a>
     </div>
     
@@ -773,8 +785,8 @@
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://localhost:1313/react/beginwork_update/">
-            § 3: React18 阅读笔记 -- BeginWork case 梳理
+        <a href="http://localhost:1313/react/beginwork_case/">
+            § 4: React18 阅读笔记 -- BeginWork case 梳理
         </a>
     </div>
     
@@ -783,7 +795,7 @@
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
         <a href="http://localhost:1313/react/completework/">
-            § 4: React18 阅读笔记 -- completeWork
+            § 5: React18 阅读笔记 -- completeWork
         </a>
     </div>
     
@@ -792,7 +804,7 @@
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
         <a href="http://localhost:1313/react/commit/">
-            § 5: React18 阅读笔记 -- commit
+            § 6: React18 阅读笔记 -- commit
         </a>
     </div>
     
@@ -857,13 +869,13 @@ New article!
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">new</span> <span class="nx">ReactDOMRoot</span><span class="p">(</span><span class="nx">root</span><span class="p">);</span>
 </span></span></code></pre></div>
 
-<h2 class="relative group">react 
-    <div id="react" class="anchor"></div>
+<h2 class="relative group">render 入口 
+    <div id="render-%E5%85%A5%E5%8F%A3" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#react" aria-label="锚点">#</a>
+            style="text-decoration-line: none !important;" href="#render-%E5%85%A5%E5%8F%A3" aria-label="锚点">#</a>
     </span>        
     
 </h2>
@@ -907,7 +919,19 @@ New article!
 </span></span><span class="line"><span class="cl">    <span class="nx">entangleTransitions</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">current</span><span class="p">,</span> <span class="nx">lane</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
+</span></span></code></pre></div>
+
+<h2 class="relative group">scheduleUpdateOnFiber 
+    <div id="scheduleupdateonfiber" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#scheduleupdateonfiber" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">scheduleUpdateOnFiber</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">root</span>: <span class="kt">FiberRoot</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">fiber</span>: <span class="kt">Fiber</span><span class="p">,</span>
@@ -941,8 +965,20 @@ New article!
 </span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackPriority</span> <span class="o">=</span> <span class="nx">newCallbackPriority</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span> <span class="o">=</span> <span class="nx">newCallbackNode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">scheduleCallback 
+    <div id="schedulecallback" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#schedulecallback" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>通过  postMessage 建立一个 宏任务 启动挂载</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// 这里调用的就是 Scheduler 中的 unstable_scheduleCallback 方法
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="nx">Scheduler_scheduleCallback</span><span class="p">(</span><span class="nx">priorityLevel</span><span class="p">,</span> <span class="nx">callback</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -1004,8 +1040,20 @@ New article!
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
+</span></span></code></pre></div>
+
+<h2 class="relative group">flushWork 
+    <div id="flushwork" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#flushwork" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>循环调度 宏任务（挂载时只 push 了 一个 task）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/scheduler/src/forks/Scheduler.js
 </span></span></span><span class="line"><span class="cl"><span class="c1">// hasTimeRemaining = true ,initialTime = currentTime
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">flushWork</span><span class="p">(</span><span class="nx">hasTimeRemaining</span><span class="p">,</span> <span class="nx">initialTime</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">isHostCallbackScheduled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
@@ -1053,7 +1101,20 @@ New article!
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
+</span></span></code></pre></div>
+
+<h2 class="relative group">performConcurrentWorkOnRoot 
+    <div id="performconcurrentworkonroot" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#performconcurrentworkonroot" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>调用 workLoopSync 开始 递归创建 fiber</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">performConcurrentWorkOnRoot</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">didTimeout</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">originalCallbackNode</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">callbackNode</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -1113,8 +1174,20 @@ New article!
 </span></span><span class="line"><span class="cl">    <span class="nx">performUnitOfWork</span><span class="p">(</span><span class="nx">workInProgress</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">performUnitOfWork</span><span class="p">(</span><span class="nx">unitOfWork</span>: <span class="kt">Fiber</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">performUnitOfWork 
+    <div id="performunitofwork" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#performunitofwork" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>进入到最小调度单元，递归创建 fiber 并链接到workinprogress</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">performUnitOfWork</span><span class="p">(</span><span class="nx">unitOfWork</span>: <span class="kt">Fiber</span><span class="p">)</span><span class="o">:</span> <span class="k">void</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">current</span> <span class="o">=</span> <span class="nx">unitOfWork</span><span class="p">.</span><span class="nx">alternate</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">next</span><span class="p">;</span> <span class="c1">// 用来存放beginWork()返回的结果
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 根据 workInProgress.tag 创建对应 fiber
@@ -1176,8 +1249,20 @@ New article!
 </span></span><span class="line"><span class="cl">    <span class="nx">workInProgressRootExitStatus</span> <span class="o">=</span> <span class="nx">RootCompleted</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">finishConcurrentRender</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exitStatus</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">)</span> <span class="p">{</span>
+</span></span></code></pre></div>
+
+<h2 class="relative group">finishConcurrentRender 
+    <div id="finishconcurrentrender" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#finishconcurrentrender" aria-label="锚点">#</a>
+    </span>        
+    
+</h2>
+<p>wrokinprogress树创建完成 开始 commit</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">finishConcurrentRender</span><span class="p">(</span><span class="nx">root</span><span class="p">,</span> <span class="nx">exitStatus</span><span class="p">,</span> <span class="nx">lanes</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"> <span class="k">switch</span> <span class="p">(</span><span class="nx">exitStatus</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">case</span> <span class="nx">RootCompleted</span><span class="o">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// The work completed. Ready to commit.
@@ -1255,15 +1340,15 @@ New article!
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        § 1: 本文
+        § 2: 本文
     </div>
     
     
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://localhost:1313/react/beginwork_create/">
-            § 2: React18 阅读笔记 -- beginwork fiber
+        <a href="http://localhost:1313/react/beginwork_fiber/">
+            § 3: React18 阅读笔记 -- beginwork fiber
         </a>
     </div>
     
@@ -1271,8 +1356,8 @@ New article!
     
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
-        <a href="http://localhost:1313/react/beginwork_update/">
-            § 3: React18 阅读笔记 -- BeginWork case 梳理
+        <a href="http://localhost:1313/react/beginwork_case/">
+            § 4: React18 阅读笔记 -- BeginWork case 梳理
         </a>
     </div>
     
@@ -1281,7 +1366,7 @@ New article!
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
         <a href="http://localhost:1313/react/completework/">
-            § 4: React18 阅读笔记 -- completeWork
+            § 5: React18 阅读笔记 -- completeWork
         </a>
     </div>
     
@@ -1290,7 +1375,7 @@ New article!
     <div
         class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
         <a href="http://localhost:1313/react/commit/">
-            § 5: React18 阅读笔记 -- commit
+            § 6: React18 阅读笔记 -- commit
         </a>
     </div>
     
@@ -1317,7 +1402,7 @@ New article!
       </script>
       
       
-      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      <script type="text/javascript" src="/js/page.min.14302085a200decaf2fd2053e42ee1069b4a65b57e5c88f86deb11a0de54abd5cd02a7ce515d25261d86c95d5fb2e4881d86ac8a1123bd444aa4d66eabcd827d.js" integrity="sha512-FDAghaIA3sry/SBT5C7hBptKZbV&#43;XIj4besRoN5Uq9XNAqfOUV0lJh2GyV1fsuSIHYasihEjvURKpNZuq82CfQ=="></script>
       
   
     </section>

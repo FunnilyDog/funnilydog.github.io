@@ -5,7 +5,7 @@ draft: false
 summary: "从 render 入口函数 开始 debug react18 源码，梳理 主体流程 有哪些步骤"
 series: ["React18 阅读笔记"]
 tags: ["react","javascript", "notes"]
-series_order: 1
+series_order: 2
 featureimage1: "imgs/react18-sq.png"
 ---
 
@@ -50,7 +50,7 @@ New article!
   return new ReactDOMRoot(root);
 ```
 
-## react
+## render 入口
 
 ```ts
 // path: packages/react-dom/src/client/ReactDomRoot.js
@@ -95,6 +95,7 @@ function updateContainer(
 }
 ```
 
+## scheduleUpdateOnFiber
 ```ts
 // path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
 function scheduleUpdateOnFiber(
@@ -130,7 +131,11 @@ function ensureRootIsScheduled(root: FiberRoot, currentTime: number) {
   root.callbackPriority = newCallbackPriority;
   root.callbackNode = newCallbackNode;
 }
+```
 
+## scheduleCallback
+通过  postMessage 建立一个 宏任务 启动挂载
+```ts
 function scheduleCallback(priorityLevel, callback) {
   // 这里调用的就是 Scheduler 中的 unstable_scheduleCallback 方法
   return Scheduler_scheduleCallback(priorityLevel, callback);
@@ -193,7 +198,13 @@ const performWorkUntilDeadline = () => {
     }
   }
 };
+```
 
+## flushWork
+
+循环调度 宏任务（挂载时只 push 了 一个 task）
+
+```ts
 // path: packages/scheduler/src/forks/Scheduler.js
 // hasTimeRemaining = true ,initialTime = currentTime
 function flushWork(hasTimeRemaining, initialTime) {
@@ -244,6 +255,9 @@ function workLoop(hasTimeRemaining, initialTime) {
 }
 ```
 
+## performConcurrentWorkOnRoot
+
+调用 workLoopSync 开始 递归创建 fiber
 ```ts
 // path: packages/react-reconciler/src/ReactFiberWorkLoop.old.js
 function performConcurrentWorkOnRoot(root, didTimeout) {
@@ -305,7 +319,10 @@ function workLoopSync() {
     performUnitOfWork(workInProgress);
   }
 }
-
+```
+## performUnitOfWork
+进入到最小调度单元，递归创建 fiber 并链接到workinprogress
+```ts
 function performUnitOfWork(unitOfWork: Fiber): void {
   const current = unitOfWork.alternate;
   let next; // 用来存放beginWork()返回的结果
@@ -368,7 +385,10 @@ function completeUnitOfWork(unitOfWork: Fiber): void {
     workInProgressRootExitStatus = RootCompleted;
   }
 }
-
+```
+## finishConcurrentRender
+wrokinprogress树创建完成 开始 commit
+```ts
 finishConcurrentRender(root, exitStatus, lanes) {
  switch (exitStatus) {
   case RootCompleted: {

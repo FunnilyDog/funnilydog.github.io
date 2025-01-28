@@ -2,10 +2,10 @@
 title: "React18 阅读笔记 -- commit"
 date: 2025-01-17T18:41:00+08:00
 draft: false
-tags: ["react","javascript", "notes"]
+tags: ["react", "javascript", "notes"]
 summary: "commit阶段 处理 fiber 创建/更新 遗留的 副作用 值得一提的是 useEffect 在该阶段会通过 microTask 方式放到微任务队列等待当前同步代码执行完成后再执行"
 series: ["React18 阅读笔记"]
-series_order: 5
+series_order: 6
 ---
 
 ## commitRoot
@@ -43,6 +43,11 @@ function commitRoot(root) {
   return null;
 }
 ```
+
+## commitRootImpl
+
+具体执行方法，先检测是否有上轮更新未执行的 effect，如果有则先调用 flushPassiveEffects 同步执行上轮遗留 effect 任务。
+否则通过 scheduleCallback 将 本轮 effect 加入到 任务队列(taskQueue)中。
 
 ```ts
 function commitRootImpl(
@@ -160,9 +165,12 @@ function flushPassiveEffectsImpl() {
 
   flushSyncCallbacks();
 }
+```
 
+## BeforeMutationEffects
+
+```ts
 // BeforeMutationEffects 阶段
-
 export function commitBeforeMutationEffects(
   root: FiberRoot,
   firstChild: Fiber
@@ -211,9 +219,11 @@ function commitBeforeMutationEffects_complete() {
     nextEffect = fiber.return;
   }
 }
+```
 
-// mutation 阶段
+## mutation
 
+```ts
 export function commitMutationEffects(
   root: FiberRoot,
   finishedWork: Fiber,
@@ -288,6 +298,6 @@ function commitMutationEffectsOnFiber(
 }
 ```
 
-# 流程图
+## 流程图
 
 ![Alt text](/imgs/commit.png "commit 流程图")
