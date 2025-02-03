@@ -15,18 +15,18 @@
       <pubDate>Sun, 19 Jan 2025 18:45:18 +0800</pubDate>
       
       <guid>http://localhost:1313/react/debug/</guid>
-      <description>从 render 入口函数 开始 debug react18 源码，梳理 主体流程 有哪些步骤</description>
+      <description>简述如何利用打包工具 webpack / vite 配置 react debug 环境</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/debug/feature.jpg" />
     </item>
     
     <item>
       <title>React18 阅读笔记 -- BeginWork case 梳理</title>
-      <link>http://localhost:1313/react/beginwork_update/</link>
+      <link>http://localhost:1313/react/beginwork_case/</link>
       <pubDate>Sat, 18 Jan 2025 14:57:48 +0800</pubDate>
       
-      <guid>http://localhost:1313/react/beginwork_update/</guid>
+      <guid>http://localhost:1313/react/beginwork_case/</guid>
       <description>聚焦 beginwork 中针对 不同的 tag 具体实现逻辑</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_update/feature.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_case/feature.jpg" />
     </item>
     
     <item>
@@ -41,12 +41,12 @@
     
     <item>
       <title>React18 阅读笔记 -- beginwork fiber</title>
-      <link>http://localhost:1313/react/beginwork_create/</link>
+      <link>http://localhost:1313/react/beginwork_fiber/</link>
       <pubDate>Fri, 17 Jan 2025 18:43:49 +0800</pubDate>
       
-      <guid>http://localhost:1313/react/beginwork_create/</guid>
+      <guid>http://localhost:1313/react/beginwork_fiber/</guid>
       <description>聚焦 react fiber 调度的单元 beginWork 大致梳理其如何创建/更新/diff fiber 的</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_create/feature.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_fiber/feature.jpg" />
     </item>
     
     <item>

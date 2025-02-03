@@ -41,12 +41,12 @@
     
     <item>
       <title>React18 阅读笔记 -- BeginWork case 梳理</title>
-      <link>http://localhost:1313/react/beginwork_update/</link>
+      <link>http://localhost:1313/react/beginwork_case/</link>
       <pubDate>Sat, 18 Jan 2025 14:57:48 +0800</pubDate>
       
-      <guid>http://localhost:1313/react/beginwork_update/</guid>
+      <guid>http://localhost:1313/react/beginwork_case/</guid>
       <description>聚焦 beginwork 中针对 不同的 tag 具体实现逻辑</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_update/feature.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_case/feature.jpg" />
     </item>
     
     <item>
@@ -61,12 +61,12 @@
     
     <item>
       <title>React18 阅读笔记 -- beginwork fiber</title>
-      <link>http://localhost:1313/react/beginwork_create/</link>
+      <link>http://localhost:1313/react/beginwork_fiber/</link>
       <pubDate>Fri, 17 Jan 2025 18:43:49 +0800</pubDate>
       
-      <guid>http://localhost:1313/react/beginwork_create/</guid>
+      <guid>http://localhost:1313/react/beginwork_fiber/</guid>
       <description>聚焦 react fiber 调度的单元 beginWork 大致梳理其如何创建/更新/diff fiber 的</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_create/feature.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/beginwork_fiber/feature.jpg" />
     </item>
     
     <item>
@@ -77,6 +77,16 @@
       <guid>http://localhost:1313/react/commit/</guid>
       <description>commit阶段 处理 fiber 创建/更新 遗留的 副作用 值得一提的是 useEffect 在该阶段会通过 microTask 方式放到微任务队列等待当前同步代码执行完成后再执行</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/react/commit/feature.jpg" />
+    </item>
+    
+    <item>
+      <title>React 中使用 Zustand 状态管理库 及其源码解析</title>
+      <link>http://localhost:1313/posts/zustand/</link>
+      <pubDate>Mon, 13 Jan 2025 13:55:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/zustand/</guid>
+      <description>文章主要介绍了Zustand这一React状态管理库，包括其简介、优势、使用方法、与Redux对比、踩坑点、中间件、选择理由、工作原理等。Zustand轻量简洁，API友好，支持TypeScript，具有性能优化、灵活可扩展等优点，可轻松集成和处理异步操作，能完美替代某些传统状态管理库的不足，在实际使用中有多种优化和配置方式。</description>
+      
     </item>
     
     <item>

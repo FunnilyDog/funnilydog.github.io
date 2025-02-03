@@ -81,7 +81,7 @@ function reconcileChildren(
 
 ```ts
 // path: packages/react-reconciler/src/ReactChildFiber.old.js
-//  根据 newChild.$$typeof 不同类型 创建 fiber
+// 根据 newChild.$$typeof 不同类型 创建 fiber
 function reconcileChildFibers(
   returnFiber: Fiber,
   currentFirstChild: Fiber | null,
