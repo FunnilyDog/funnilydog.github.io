@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>状态管理 on FunnilyDog‘s Site</title>
-    <link>http://localhost:1313/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
+    <link>http://blog.funnilydog.top/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</link>
     <description>Recent content in 状态管理 on FunnilyDog‘s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <copyright>© 2025 FunnilyDog‘s Site</copyright>
-    <lastBuildDate>Mon, 13 Jan 2025 13:55:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jan 2025 13:55:00 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/tags/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>React 中使用 Zustand 状态管理库 及其源码解析</title>
-      <link>http://localhost:1313/posts/zustand/</link>
+      <link>http://blog.funnilydog.top/posts/zustand/</link>
       <pubDate>Mon, 13 Jan 2025 13:55:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/zustand/</guid>
+      <guid>http://blog.funnilydog.top/posts/zustand/</guid>
       <description>文章主要介绍了Zustand这一React状态管理库，包括其简介、优势、使用方法、与Redux对比、踩坑点、中间件、选择理由、工作原理等。Zustand轻量简洁，API友好，支持TypeScript，具有性能优化、灵活可扩展等优点，可轻松集成和处理异步操作，能完美替代某些传统状态管理库的不足，在实际使用中有多种优化和配置方式。</description>
       
     </item>

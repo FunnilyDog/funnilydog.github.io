@@ -14,7 +14,7 @@ enableCodeCopy = false
 
 replyByEmail = false
 
-# mainSections = ["notes/react"]
+mainSections = ["react"]
 # robots = ""
 
 disableImageOptimization = false

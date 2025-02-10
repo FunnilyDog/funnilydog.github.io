@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Formily on FunnilyDog‘s Site</title>
+    <link>http://blog.funnilydog.top/tags/formily/</link>
+    <description>Recent content in Formily on FunnilyDog‘s Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>© 2025 FunnilyDog‘s Site</copyright>
+    <lastBuildDate>Mon, 13 Jan 2025 13:55:00 +0800</lastBuildDate><atom:link href="http://blog.funnilydog.top/tags/formily/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Formily 使用及源码简介</title>
+      <link>http://blog.funnilydog.top/posts/formily/</link>
+      <pubDate>Mon, 13 Jan 2025 13:55:00 +0800</pubDate>
+      
+      <guid>http://blog.funnilydog.top/posts/formily/</guid>
+      <description>本文主要从&lt;code&gt;formily&lt;/code&gt;简介、快速上手、生态、使用场景以及源码等方面介绍formily</description>
+      
+    </item>
+    
+  </channel>
+</rss>

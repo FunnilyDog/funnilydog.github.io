@@ -24,7 +24,7 @@
   weight = 20
 
 [[main]]
-  name = "八股文"
+  name = "面筋"
   # parent = "随笔"
   pageRef = "notes"
   weight = 20
